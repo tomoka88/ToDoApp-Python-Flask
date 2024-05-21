@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Kanban ToDo App{% endblock %}
+
+{% block content %}
+<h1>ToDoList</h1>
+<div class="container">
+    <form method="POST" action="/add" class="task-form">
+        <div class="form-group">
+            <label for="title">ToDo:</label>
+            <input type="text" name="title" id="title" placeholder="Title" required>
+        </div>
+        <div class="form-group">
+            <label for="content">内容:</label>
+            <textarea name="content" id="content" placeholder="Content" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="due_date">期日:</label>
+            <input type="date" name="due_date" id="due_date">
+        </div>
+        <div class="form-group">
+            <label for="status">ステータス:</label>
+            <select name="status">
+                <option value="ToDo">未完了</option>
+                <option value="In Progress">作業中</option>
+                <option value="Done">完了</option>
+            </select>
+        </div>
+        <button type="submit">登録</button>
+    </form>
+    <div class="tasks">
+        <h2>ToDo</h2>
+        <ul>
+            {% for task in tasks if task.status == 'ToDo' %}
+                <li>{{ task.title }} - {{ task.due_date }} 
+                    <a href="/detail/{{ task.id }}">詳細</a>
+                    <a href="/edit/{{ task.id }}">変更</a> 
+                    <a href="/delete/{{ task.id }}">削除</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+

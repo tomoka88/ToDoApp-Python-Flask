@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ff66b2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.task-form, .task-detail {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ff66b2;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+}
+
+.task-form .form-group, .task-detail p {
+    margin-bottom: 15px;
+}
+
+.task-form label, .task-detail strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff66b2;
+}
+
+.task-form input,
+.task-form textarea {
+    width: calc(100% - 20px); /* 余白を追加 */
+    padding: 10px;
+    margin-right: 10px; /* 右側の余白を追加 */
+    border: 1px solid #ff66b2;
+    border-radius: 5px;
+    background-color: #ffccf2;
+}
+
+.task-form button {
+    padding: 10px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-form button:hover {
+    background-color: #ff4d94;
+}
+
+.tasks {
+    padding: 10px;
+    border: 2px solid #ff66b2;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+}
+
+.tasks ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tasks li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ffccf2;
+    border: 1px solid #ff66b2;
+    border-radius: 5px;
+}
+
+.tasks a {
+    color: #ff66b2;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.tasks a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Task Details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="task-detail">
+        <h1>詳細</h1>
+        <h2>{{ task.title }}</h2>
+        <p><strong>内容:</strong> {{ task.content }}</p>
+        <p><strong>期日:</strong> {{ task.due_date }}</p>
+        <p><strong>Status:</strong> {{ task.status }}</p>
+        <a href="/">Back to List</a>
+    </div>
+</div>
+{% endblock %}
